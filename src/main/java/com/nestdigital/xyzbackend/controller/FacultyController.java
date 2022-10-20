@@ -15,7 +15,7 @@ public class FacultyController {
     private FacultyDao dao;
 
     @CrossOrigin(origins = "*")
-    @PostMapping(value = "/addfaculty",consumes = "application/json",produces = "application/json")
+    @PostMapping(path = "/addfaculty",consumes = "application/json",produces = "application/json")
     public String addfaculty(@RequestBody FacultyModel faculty){
         System.out.println(faculty.toString());
         dao.save(faculty);
